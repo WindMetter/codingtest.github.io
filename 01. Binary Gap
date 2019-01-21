@@ -2,19 +2,13 @@
 
 class Solution {
     public int solution(int N) {
-        String binary = Integer.toBinaryString(N);
-        String[] birArray = new String[binary.length()-1];
+        String binary = Integer.toBinaryString(N);      /* 입력받은 숫자를 2진수로 바꿔줌 */
         int cnt = 0;
         int max = 0;
         
-        /* binary의 데이터를 한글자씩 배열에 집어넣어줌 */
-        for(int i = 0; i < birArray.length; i++){
-            birArray[i] = binary.substring(i, i+1);
-        }
-        
-        /* 배열을 하나씩 검사하여 0의 갯수를 센 다음, 이전에 입력된 가장 긴 길이보다 크면 새로운 갯수를 넣어줌 */
-        for(int i = 0; i < birArray.length; i++){
-            if(Integer.parseInt(birArray[i]) == 0){
+        /* binary의 글자를 하나씩 검사하여 0의 갯수를 센 다음, 이전에 입력된 가장 긴 길이보다 크면 새로운 갯수를 넣어줌 */
+        for(int i = 0; i < binary.length(); i++){
+            if(binary.charAt(i) == '0'){
                 cnt++;
             } else {
                 if(cnt > max){
