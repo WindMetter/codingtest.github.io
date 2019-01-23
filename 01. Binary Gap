@@ -19,6 +19,7 @@ class Solution {
             }
         }
         
+        /* 100000 처럼 Gap이 없으면 0을 반환 */
         return cnt == binary.length()-1 ? 0 : max;
     }
 }
