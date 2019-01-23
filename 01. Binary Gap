@@ -1,4 +1,5 @@
 입력받은 숫자를 2진수로 변환했을 때, 0의 길이가 가장 긴 것을 return 하라
+(N이 32같은 Gap이 없는 숫자는 0을 반환)
 
 class Solution {
     public int solution(int N) {
@@ -18,6 +19,6 @@ class Solution {
             }
         }
         
-        return max;
+        return cnt == binary.length()-1 ? 0 : max;
     }
 }
